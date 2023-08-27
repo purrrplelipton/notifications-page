@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Notifications page | Frontend Mentor</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p data-count="3">Notifications</p>
+        <button type="button">Mark all as read</button>
+      </header>
+      <ul class="notifications-list">
+        <li data-new="true">
+          <div class="avatar">
+            <img
+              src="./assets/images/avatar-mark-webber.webp"
+              alt="Mark Webber"
+            />
+          </div>
+          <div class="outer">
+            <p>
+              <a href="#" class="user">Mark Webber</a>
+              <span class="action">reacted to your recent post</span>
+              <a href="#" class="post">My first tournament today!</a
+              ><span class="red-dot"></span>
+            </p>
+            <span class="mess-age">1m ago</span>
+          </div>
+        </li>
+        <li data-new="true">
+          <div class="avatar">
+            <img
+              src="./assets/images/avatar-angela-gray.webp"
+              alt="Angela Gray"
+            />
+          </div>
+          <div class="outer">
+            <p>
+              <a href="#" class="user">Angela Gray</a>
+              <span class="action">followed you</span
+              ><span class="red-dot"></span>
+            </p>
+            <span class="mess-age">5m ago</span>
+          </div>
+        </li>
+        <li data-new="true">
+          <div class="avatar">
+            <img
+              src="./assets/images/avatar-jacob-thompson.webp"
+              alt="Jacob Thompson"
+            />
+          </div>
+          <div class="outer">
+            <p>
+              <a href="#" class="user">Jacob Thompson</a>
+              <span class="action">has joined your group</span>
+              <a href="#" class="group">Chess Club</a
+              ><span class="red-dot"></span>
+            </p>
+            <span class="mess-age">1 day ago</span>
+          </div>
+        </li>
+        <li>
+          <div class="avatar">
+            <img
+              src="./assets/images/avatar-rizky-hasanuddin.webp"
+              alt="Rizky Hasanuddin"
+            />
+          </div>
+          <div class="outer">
+            <div>
+              <p>
+                <a href="#" class="user">Rizky Hasanuddin</a>
+                <span class="action">sent you a private message</span>
+              </p>
+              <span class="mess-age">5 days ago</span>
+              <a href="#" class="message">
+                Hello, thanks for setting up the Chess Club. I've been a member
+                for a few weeks now and I'm already having lots of fun and
+                improving my game.
+              </a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="avatar">
+            <img
+              src="./assets/images/avatar-kimberly-smith.webp"
+              alt="Kimberly Smith"
+            />
+          </div>
+          <div class="outer">
+            <div>
+              <p>
+                <a href="#" class="user">Kimberly Smith</a>
+                <span class="action">commented on your picture</span>
+              </p>
+              <a href="#" class="photo">
+                <img src="./assets/images/image-chess.webp" alt="Image Chess" />
+              </a>
+            </div>
+            <span class="mess-age">1 week ago</span>
+          </div>
+        </li>
+        <li>
+          <div class="avatar">
+            <img
+              src="./assets/images/avatar-nathan-peterson.webp"
+              alt="Nathan Peterson"
+            />
+          </div>
+          <div class="outer">
+            <p>
+              <a href="#" class="user">Nathan Peterson</a>
+              <span class="action">reacted to your recent post</span>
+              <a href="#" class="post"
+                >5 end-game strategies to increase your win rate</a
+              >
+            </p>
+            <span class="mess-age">2 weeks ago</span>
+          </div>
+        </li>
+        <li>
+          <div class="avatar">
+            <img src="./assets/images/avatar-anna-kim.webp" alt="Anna kim" />
+          </div>
+          <div class="outer">
+            <p>
+              <a href="#" class="user">Anna Kim</a>
+              <span class="action">left the group</span>
+              <a href="#" class="group">Chess Club</a>
+            </p>
+            <span class="mess-age">2 weeks ago</span>
+          </div>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>

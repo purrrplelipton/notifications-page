@@ -1,0 +1,194 @@
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url(./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+  font-display: swap;
+}
+
+:root {
+  background-color: hsl(210, 60%, 98%);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+}
+
+main {
+  padding: 1.25em;
+  background-color: #fff;
+}
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25em;
+}
+
+header p {
+  font-weight: 800;
+  font-size: 1.125em;
+  line-height: 1.2;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+header p::after {
+  position: absolute;
+  left: 100%;
+  content: attr(data-count);
+  color: hsla(0, 0%, 100%, 1);
+  background-color: hsl(219, 85%, 26%);
+  font-size: 0.8em;
+  line-height: 1.5;
+  padding: 0 0.7em;
+  margin-left: 0.625em;
+  border-radius: 6px;
+}
+
+header button {
+  border: 0;
+  padding: 0;
+  color: hsl(219, 14%, 63%);
+  background-color: #00000000;
+  font-size: 0.8em;
+}
+
+.notifications-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1em;
+}
+
+.notifications-list li {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  /* justify-content: space-between; */
+  gap: 1.125em;
+  border-radius: 10px;
+  padding: 1.2em;
+  font-size: 0.875em;
+  line-height: 1.2;
+}
+
+.notifications-list li[data-new] {
+  background-color: hsl(210, 60%, 98%);
+}
+
+.notifications-list li .avatar {
+  max-width: 40px;
+}
+
+.notifications-list li .outer {
+  align-self: center;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0.375em;
+}
+
+.notifications-list li .outer p {
+  color: hsla(0, 0%, 0%, 0.45);
+}
+
+.notifications-list li .outer p .user,
+.notifications-list li .outer p .post,
+.notifications-list li .outer p .group {
+  text-decoration: none;
+
+  font-weight: 800;
+  color: hsl(224, 21%, 14%);
+}
+
+.notifications-list li .outer p .post {
+  color: hsla(0, 0%, 0%, 0.6);
+}
+
+.notifications-list li .outer p .group {
+  color: hsl(219, 85%, 26%);
+}
+
+.notifications-list li .outer p .red-dot {
+  --dot-width: 7px;
+  display: inline-block;
+  width: var(--dot-width);
+  aspect-ratio: 1 / 1;
+  background-color: hsl(1, 90%, 64%);
+  border-radius: 50%;
+  margin-left: 0.375em;
+  margin-bottom: calc(calc(1.2em / 2) - var(--dot-width));
+}
+
+.notifications-list li:not(:nth-child(4)) .outer div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notifications-list li .outer div .photo {
+  max-width: 40px;
+}
+
+.notifications-list li .outer .message {
+  display: block;
+  text-decoration: none;
+  color: hsla(0, 0%, 0%, 0.3);
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 1em;
+  margin-top: 0.8em;
+  user-select: none;
+}
+
+.notifications-list li .outer .mess-age {
+  font-size: 0.9em;
+  color: hsla(0, 0%, 0%, 0.3);
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+
+  main {
+    padding: 1.625em;
+    max-width: 625px;
+    margin: auto;
+    border-radius: 1em;
+    box-shadow: 1em 1em 2em hsla(0, 0%, 0%, 0.05);
+  }
+
+  header {
+    margin-bottom: 1.625em;
+  }
+
+  header button:active,
+  .post:active,
+  .user:active,
+  .group:active {
+    color: hsl(219, 85%, 26%) !important;
+  }
+
+  .notifications-list li .outer .message:active {
+    border-color: hsl(211, 68%, 94%);
+    background-color: hsl(211, 68%, 94%);
+  }
+
+  .notifications-list li .outer div .photo:active img {
+    border-radius: 6px;
+    box-shadow: 0 0 2px 2px hsl(211, 68%, 94%);
+  }
+}
