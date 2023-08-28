@@ -16,11 +16,13 @@
   <body>
     <main>
       <header>
-        <p data-count="3">Notifications</p>
+        <div class="header__left">
+          <p>Notifications</p>
+        </div>
         <button type="button">Mark all as read</button>
       </header>
       <ul class="notifications-list">
-        <li data-new="true">
+        <li>
           <div class="avatar">
             <img
               src="./assets/images/avatar-mark-webber.webp"
@@ -28,16 +30,15 @@
             />
           </div>
           <div class="outer">
-            <p>
+            <p class="notification">
               <a href="#" class="user">Mark Webber</a>
               <span class="action">reacted to your recent post</span>
-              <a href="#" class="post">My first tournament today!</a
-              ><span class="red-dot"></span>
+              <a href="#" class="post">My first tournament today!</a>
             </p>
             <span class="mess-age">1m ago</span>
           </div>
         </li>
-        <li data-new="true">
+        <li>
           <div class="avatar">
             <img
               src="./assets/images/avatar-angela-gray.webp"
@@ -45,15 +46,14 @@
             />
           </div>
           <div class="outer">
-            <p>
+            <p class="notification">
               <a href="#" class="user">Angela Gray</a>
-              <span class="action">followed you</span
-              ><span class="red-dot"></span>
+              <span class="action">followed you</span>
             </p>
             <span class="mess-age">5m ago</span>
           </div>
         </li>
-        <li data-new="true">
+        <li>
           <div class="avatar">
             <img
               src="./assets/images/avatar-jacob-thompson.webp"
@@ -61,11 +61,10 @@
             />
           </div>
           <div class="outer">
-            <p>
+            <p class="notification">
               <a href="#" class="user">Jacob Thompson</a>
               <span class="action">has joined your group</span>
-              <a href="#" class="group">Chess Club</a
-              ><span class="red-dot"></span>
+              <a href="#" class="group">Chess Club</a>
             </p>
             <span class="mess-age">1 day ago</span>
           </div>
@@ -79,7 +78,7 @@
           </div>
           <div class="outer">
             <div>
-              <p>
+              <p class="notification">
                 <a href="#" class="user">Rizky Hasanuddin</a>
                 <span class="action">sent you a private message</span>
               </p>
@@ -101,7 +100,7 @@
           </div>
           <div class="outer">
             <div>
-              <p>
+              <p class="notification">
                 <a href="#" class="user">Kimberly Smith</a>
                 <span class="action">commented on your picture</span>
               </p>
@@ -120,7 +119,7 @@
             />
           </div>
           <div class="outer">
-            <p>
+            <p class="notification">
               <a href="#" class="user">Nathan Peterson</a>
               <span class="action">reacted to your recent post</span>
               <a href="#" class="post"
@@ -135,7 +134,7 @@
             <img src="./assets/images/avatar-anna-kim.webp" alt="Anna kim" />
           </div>
           <div class="outer">
-            <p>
+            <p class="notification">
               <a href="#" class="user">Anna Kim</a>
               <span class="action">left the group</span>
               <a href="#" class="group">Chess Club</a>
@@ -145,5 +144,6 @@
         </li>
       </ul>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>

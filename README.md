@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [https://tobiii-np.vercel.app](https://tobiii-np.vercel.app/)
+- Solution URL: [Simple Notifications Page](https://www.frontendmentor.io/solutions/simple-notifications-page-u6X-1Us4uf)
+- Live Site URL: [tobiii-np.vercel.app](https://tobiii-np.vercel.app/)
 
 ## My process
 

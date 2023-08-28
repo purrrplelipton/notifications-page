@@ -30,25 +30,27 @@ header {
   margin-bottom: 1.25em;
 }
 
-header p {
+.header__left {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.header__left p {
   font-weight: 800;
   font-size: 1.125em;
   line-height: 1.2;
-  position: relative;
-  display: flex;
-  align-items: center;
 }
 
-header p::after {
-  position: absolute;
-  left: 100%;
-  content: attr(data-count);
-  color: hsla(0, 0%, 100%, 1);
+.header__left .notification-count {
+  color: #fff;
   background-color: hsl(219, 85%, 26%);
-  font-size: 0.8em;
+  font-size: 1em;
   line-height: 1.5;
+  font-weight: 800;
   padding: 0 0.7em;
-  margin-left: 0.625em;
   border-radius: 6px;
 }
 
@@ -75,14 +77,14 @@ header button {
   flex-flow: row nowrap;
   align-items: flex-start;
   /* justify-content: space-between; */
-  gap: 1.125em;
+  gap: 1.118em;
   border-radius: 10px;
   padding: 1.2em;
   font-size: 0.875em;
   line-height: 1.2;
 }
 
-.notifications-list li[data-new] {
+.notifications-list li[data-status='new'] {
   background-color: hsl(210, 60%, 98%);
 }
 
@@ -100,36 +102,38 @@ header button {
   gap: 0.375em;
 }
 
-.notifications-list li .outer p {
+.notification {
   color: hsla(0, 0%, 0%, 0.45);
+  position: relative;
 }
 
-.notifications-list li .outer p .user,
-.notifications-list li .outer p .post,
-.notifications-list li .outer p .group {
+.user,
+.post,
+.group {
   text-decoration: none;
 
   font-weight: 800;
   color: hsl(224, 21%, 14%);
 }
 
-.notifications-list li .outer p .post {
+.notification .post {
   color: hsla(0, 0%, 0%, 0.6);
 }
 
-.notifications-list li .outer p .group {
+.notification .group {
   color: hsl(219, 85%, 26%);
 }
 
-.notifications-list li .outer p .red-dot {
-  --dot-width: 7px;
+.notifications-list li[data-status='new'] .outer p::after {
+  content: '';
+  --dot-width: 6px;
   display: inline-block;
   width: var(--dot-width);
   aspect-ratio: 1 / 1;
   background-color: hsl(1, 90%, 64%);
   border-radius: 50%;
-  margin-left: 0.375em;
-  margin-bottom: calc(calc(1.2em / 2) - var(--dot-width));
+  margin-left: 0.2em;
+  margin-bottom: calc(calc(1em / 2) - var(--dot-width));
 }
 
 .notifications-list li:not(:nth-child(4)) .outer div {
