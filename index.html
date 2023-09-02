@@ -9,9 +9,48 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
     <title>Notifications page | Frontend Mentor</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img,
+      picture,
+      video,
+      canvas,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        overflow-wrap: break-word;
+      }
+    </style>
   </head>
   <body>
     <main>
@@ -144,6 +183,32 @@
         </li>
       </ul>
     </main>
-    <script src="./script.js"></script>
+    <script>
+      const { log } = console;
+      let notificationCount = 3;
+      const headerLeft = document.querySelector('.header__left');
+      const markAllAsRead = document.querySelector('header button');
+      const notificationsWrapper = document.querySelectorAll(
+        '.notifications-list li',
+      );
+      const notifications = document.querySelectorAll('.notification');
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const countTag = document.createElement('span');
+        countTag.textContent = notificationCount;
+        countTag.className = 'notification-count';
+        headerLeft.appendChild(countTag);
+
+        for (let i = 0; i < notificationCount; i++)
+          notificationsWrapper[i].setAttribute('data-status', 'new');
+
+        markAllAsRead.addEventListener('click', () => {
+          notificationsWrapper.forEach((n) => n.removeAttribute('data-status'));
+          markAllAsRead.disabled = true;
+          notificationCount = 0;
+          headerLeft.removeChild(countTag);
+        });
+      });
+    </script>
   </body>
 </html>

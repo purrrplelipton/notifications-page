@@ -56,7 +56,6 @@ header {
 
 header button {
   border: 0;
-  padding: 0;
   color: hsl(219, 14%, 63%);
   background-color: #00000000;
   font-size: 0.8em;
@@ -64,7 +63,6 @@ header button {
 
 .notifications-list {
   list-style-type: none;
-  padding: 0;
   display: flex;
   flex-flow: column nowrap;
   align-items: stretch;
